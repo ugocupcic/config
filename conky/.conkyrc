@@ -18,7 +18,7 @@ total_run_times 0
 # Create own window instead of using desktop (required in nautilus)
 own_window yes
 own_window_transparent yes
-own_window_type conky
+own_window_type desktop
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 # Use double buffering (reduces flicker, may not work for everyone)
@@ -145,5 +145,5 @@ ${endif}${else}${voffset 4}${font PizzaDude Bullets:size=12}4${font}${goto 32}Ne
 #Sunset: ${alignr}${execi 600 conkyForecast --location=UKXX0113 --datatype=SS}
 #Moon Phase:${alignr 8}${execi 600 conkyForecast --location=UKXX0113 --datatype=MP} ${font MoonPhases:size=8}${execi 600 conkyForecast --location=UKXX0113 --datatype=MF}${font}
 TORRENTS ${hr 2}
-${voffset -5}${font VariShapes Solid:size=14}Q${font}${goto 32}${voffset -3}Down: ${exec transmission-remote grodur:9091 -n 'macl:$PASSWORD' --list | grep '^Sum:' | awk '{print $5}'}${font} ${alignr}${voffset -1}
-${font VariShapes Solid:size=14}q${font}${goto 32}${voffset -3}Up: ${exec transmission-remote grodur:9091 -n 'macl:$PASSWORD' --list | grep '^Sum:' | awk '{print $4}'}${font}
+${voffset -5}${font VariShapes Solid:size=14}Q${font}${goto 32}${voffset -3}Down: ${exec transmission-remote grodur:9091 -n '$PASSWORD' --list | grep '^Sum:' | awk '{print $5}'}${font} ${alignr}${voffset -1}
+${font VariShapes Solid:size=14}q${font}${goto 32}${voffset -3}Up: ${exec transmission-remote grodur:9091 -n '$PASSWORD' --list | grep '^Sum:' | awk '{print $4}'}${font}
