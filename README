@@ -1,0 +1,7 @@
+Install emacs config :
+
+cd emacs ; ./setup.sh
+
+Install conky config :
+
+cd conky ; ./setup.sh
