@@ -1,0 +1,52 @@
+# — SETTINGS — #
+background no
+update_interval 1
+cpu_avg_samples 2
+net_avg_samples 2
+double_buffer yes
+no_buffers yes
+text_buffer_size 1024
+
+# — WINDOW — #
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+
+# — BORDER — #
+border_inner_margin 1
+border_outer_margin 1
+
+# — SIZE — #
+minimum_size 300
+maximum_width 300
+
+# — ALIGNMENT — #
+alignment tr
+gap_x -95
+gap_y -50
+
+# — GRAPHIC — #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+#default_bar_size 40 8
+#default_shade_color
+#own_window_colour 808080
+
+# — TEXT — #
+use_xft yes
+xftfont Dejavu Sans:size=6
+xftalpha 0.8
+uppercase no
+override_utf8_locale yes
+default_color 888
+
+# — LUA — #
+lua_load ~/.conky/lua/clock_rings.lua
+lua_draw_hook_pre clock_rings
+
+TEXT
+${time %e}${font}
+${voffset 300}
