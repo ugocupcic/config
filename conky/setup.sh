@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#check conky is installed
+CONKY_INSTALLED=`aptitude search '~i ^conky$' | wc -l`
+if [ ${CONKY_INSTALLED} -eq 0 ] ; then
+    sudo aptitude install conky
+fi
+
 # The directory of conkyrcs
 CONKY_DIR=`readlink -f $(dirname $0)`
 
