@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#check conky is installed
+CONKY_INSTALLED=`aptitude search '~i ^conky$' | wc -l`
+if [ ${CONKY_INSTALLED} -eq 0 ] ; then
+    sudo aptitude install conky
+fi
+
 # Kill Conky If Running
 test -z "`pgrep conky`" || killall -9 conky
 
