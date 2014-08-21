@@ -22,7 +22,7 @@
 
 (defvar my-packages
   '(auctex deft expand-region gist magit magithub markdown-mode cmake-mode
-	   projectile python elpy jedi python-environment flx-ido
+	   deferred projectile python elpy jedi python-environment flx-ido
 	   smex volatile-highlights yaml-mode fic-ext-mode yasnippet
 	   ibuffer ido smartparens winner dash cc-mode guess-offset
 	   auto-complete powerline git-gutter hlinum rainbow-delimiters
