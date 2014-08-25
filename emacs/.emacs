@@ -162,11 +162,13 @@
   (shell-command-on-region b e "slackcat"))
 
 ;;better python
-(elpy-enable)
-(elpy-use-ipython)
-(jedi:install-server)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; (when (require 'elpy nil t)
+;;   (elpy-enable))
+;; (elpy-use-ipython)
+;; (setq elpy-rpc-backend "jedi")
+;; (jedi:install-server)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)
 
 ;;auto complete
 (require 'auto-complete-config)
@@ -222,6 +224,8 @@
 (add-to-list 'auto-mode-alist '("manifest.xml" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\.xacro$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\.urdf$" . nxml-mode))
+
+(add-to-list 'auto-mode-alist '("\.rosinstall$" . yaml-mode))
 
 (add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
 
