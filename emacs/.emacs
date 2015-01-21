@@ -21,12 +21,12 @@
 (require 'cl)
 
 (defvar my-packages
-  '(auctex deft expand-region gist magit magithub markdown-mode cmake-mode
+  '(auctex deft expand-region gist magit markdown-mode cmake-mode
 	   deferred projectile python elpy jedi python-environment flx-ido
 	   smex volatile-highlights yaml-mode fic-ext-mode yasnippet
 	   ibuffer ido smartparens winner dash cc-mode guess-offset
 	   auto-complete powerline git-gutter hlinum rainbow-delimiters
-	   paredit sublime-themes)
+	   paredit sublime-themes graphviz-dot-mode dockerfile-mode)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()
@@ -56,8 +56,8 @@
 (global-git-gutter-mode t)
 (git-gutter:linum-setup)
 
-(require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode t)
+;;(require 'rainbow-delimiters)
+;;(global-rainbow-delimiters-mode t)
 
 (require 'fic-ext-mode)
 (add-hook 'c-mode-common-hook 'fic-ext-mode)
@@ -178,6 +178,8 @@
 (setq gist-view-gist t)
 ;;TODO doxymacs
 
+(require 'graphviz-dot-mode)
+(require 'dockerfile-mode)
 
 ;;project
 (projectile-global-mode)
