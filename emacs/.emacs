@@ -26,7 +26,8 @@
 	   smex volatile-highlights yaml-mode fic-ext-mode yasnippet
 	   ibuffer ido smartparens winner dash cc-mode guess-offset
 	   auto-complete powerline git-gutter hlinum rainbow-delimiters
-	   paredit sublime-themes graphviz-dot-mode dockerfile-mode)
+	   paredit sublime-themes graphviz-dot-mode dockerfile-mode
+	   flycheck)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()
@@ -199,6 +200,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; check python as we write it
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
