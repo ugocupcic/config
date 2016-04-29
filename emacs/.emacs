@@ -154,9 +154,6 @@
 (server-start)
 
 ;; add slack
-(setenv "SLACK_TOKEN" "xoxp-2534673254-2534673258-2556709264-c46694")
-(setenv "SLACK_CHANNELS" "general")
-
 (defun slackcat (&optional b e)
   "Upload contents of region to slack chat."
   (interactive "r")
